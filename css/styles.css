@@ -1,0 +1,199 @@
+/* Estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Ajustando o estilo para as sections */
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Imagem de fundo e escurecimento */
+.home {
+    background: url('../img/4_02.webp') no-repeat center center/cover;
+}
+
+.beneficios {
+    background: url('../img/fundobeneficios.webp') no-repeat center center/cover;
+}
+
+/* Adicionando o efeito de escurecimento */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Ajuste a opacidade conforme necessário */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Ajuste do conteúdo das sections */
+.home-conteiner, .beneficios-conteiner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Flexível para dispositivos móveis */
+    padding: 20px;
+}
+
+.home-content, .beneficios-content {
+    flex: 1; /* Ocupa espaço equivalente */
+    max-width: 50%; /* Limita a largura a 50% */
+}
+
+.home-description, .beneficios-description {
+    flex: 1;
+    max-width: 50%; /* Limita a largura a 50% */
+    margin-top: 20px;
+    text-align:center; /* Texto alinhado à esquerda */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Ajuste para o conteúdo */
+.home-description h1, .beneficios-description h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.home-description p, .beneficios-description ul {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.beneficios-description ul {
+    list-style: none; /* Remove as bolinhas padrão */
+    padding: 0;
+}
+
+.beneficios-description ul li {
+    margin-bottom: 10px;
+    position: relative;
+    text-align: left;
+    padding-left: 25px; /* Espaço para o ícone da seta */
+}
+
+.beneficios-description ul li::before {
+    content: '\2714'; /* Código Unicode para a marca de verificação (✔) */
+    color: #25E046; /* Cor verde para o ícone */
+    font-size: 1.2rem; /* Tamanho do ícone */
+    position: absolute;
+    left: 0; /* Posiciona o ícone à esquerda do item */
+    top: 0;
+}
+
+
+/* Estilos para os botões */
+/* Estilos para os botões */
+button {
+    background-color: #25E046;
+    border: 2px solid transparent; /* Borda inicial invisível */
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 2; /* Para que o texto fique acima do efeito de brilho */
+}
+
+/* Efeito de brilho nas bordas */
+button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #25E046, #ffffff, #25E046, #ffffff);
+    background-size: 400%;
+    z-index: 0;
+    border-radius: 7px; /* Levemente maior que o botão para efeito de borda */
+    animation: border-glow 2s linear infinite;
+    opacity: 0.6;
+}
+
+/* Efeito de brilho no texto */
+button:hover a {
+    text-shadow: 0 0 8px rgba(37, 224, 70, 0.8), 0 0 12px rgba(37, 224, 70, 0.6);
+}
+
+/* Animação de brilho nas bordas */
+@keyframes border-glow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Efeito de brilho no fundo ao passar o mouse */
+button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 
+                inset 0 0 10px rgba(255, 255, 255, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Para garantir o contraste com o efeito de brilho */
+button a:hover {
+    color: #ffffff;
+}
+
+
+/* Estilos para as imagens */
+.home-content img, .beneficios-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .home-conteiner, .beneficios-conteiner {
+        flex-direction: column; /* Empilha a imagem e o texto em telas pequenas */
+        padding: 10px; /* Reduz o padding para aproximar mais os elementos */
+    }
+
+    .home-content, .beneficios-content, .home-description, .beneficios-description {
+        max-width: 100%; /* Ocupa 100% da largura em telas pequenas */
+    }
+
+    .home-description h1, .beneficios-description h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem; /* Diminui o espaçamento inferior */
+    }
+
+    .home-description p, .beneficios-description ul {
+        font-size: 1rem;
+        margin-bottom: 1rem; /* Diminui o espaçamento inferior */
+    }
+
+    .home-content img, .beneficios-content img {
+        margin-bottom: 10px; /* Aproxima a imagem do texto */
+    }
+}

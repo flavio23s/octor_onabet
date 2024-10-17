@@ -202,13 +202,16 @@ button a:hover {
     .home-content, .beneficios-content, .home-description, .beneficios-description {
         max-width: 100%; /* Ocupa 100% da largura em telas pequenas */
     }
+
    .home-description {
     position: absolute;
-    padding-top: 70%;
+    padding-top: 90%;
+    align-items: center;
+    text-align: center;
        }
     .beneficios-description {
     position: absolute;
-    padding-top: 135%;
+    padding-top: 175%;
     }
 
 
@@ -218,7 +221,7 @@ button a:hover {
     }
 
     .home-description p, .beneficios-description ul {
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin-bottom: 1rem; /* Diminui o espaçamento inferior */
     }
 

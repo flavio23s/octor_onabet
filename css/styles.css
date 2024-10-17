@@ -187,7 +187,7 @@ button a:hover {
 
 /* Estilos para as imagens */
 .home-content img, .beneficios-content img {
-    max-width: 170%; /* Aumenta o tamanho da imagem para 150% do seu tamanho padrão */
+    max-width: 190%; /* Aumenta o tamanho da imagem para 150% do seu tamanho padrão */
     height: auto; /* Mantém a proporção original da imagem */
     object-fit: cover; /* Assegura que a imagem cubra o espaço sem distorcer */
 }

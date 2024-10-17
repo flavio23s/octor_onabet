@@ -168,8 +168,9 @@ button a:hover {
 
 /* Estilos para as imagens */
 .home-content img, .beneficios-content img {
-    max-width: 100%;
-    height: auto;
+    max-width: 170%; /* Aumenta o tamanho da imagem para 150% do seu tamanho padrão */
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: cover; /* Assegura que a imagem cubra o espaço sem distorcer */
 }
 
 /* Responsividade para dispositivos menores */
@@ -194,6 +195,8 @@ button a:hover {
     }
 
     .home-content img, .beneficios-content img {
+        max-width: 120%; /* Em dispositivos móveis, a imagem volta ao tamanho original */
+        height: auto;
         margin-bottom: 10px; /* Aproxima a imagem do texto */
     }
 }

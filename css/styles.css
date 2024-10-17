@@ -4,6 +4,9 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Bebas Neue', sans-serif;
+    height: 100%;  /* Garante que o body e o html ocupem 100% da altura */
+    width: 100%;   /* Garante que o body e o html ocupem 100% da largura */
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
 }
 
 /* Ajustando o estilo para as sections */
@@ -15,6 +18,14 @@ section {
     justify-content: center;
     align-items: center;
     color: white;
+    overflow: hidden; /* Garante que nenhum elemento extra cause rolagem */
+}
+
+/* Ajuste de fundo e escurecimento */
+.home, .beneficios {
+    background-position: center;
+    background-size: cover; /* Garante que o fundo cubra toda a área da seção */
+    background-repeat: no-repeat;
 }
 
 /* Imagem de fundo e escurecimento */
@@ -39,31 +50,39 @@ section::before {
     pointer-events: none;
 }
 
-/* Ajuste do conteúdo das sections */
+/* Estilos para centralizar as imagens e aproximar do texto */
 .home-conteiner, .beneficios-conteiner {
     position: relative;
     z-index: 2;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Flexível para dispositivos móveis */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    flex-wrap: wrap;          /* Permite empilhamento em dispositivos menores */
     padding: 20px;
+    text-align: center;       /* Centraliza o texto */
 }
 
 .home-content, .beneficios-content {
-    flex: 1; /* Ocupa espaço equivalente */
-    max-width: 50%; /* Limita a largura a 50% */
+    flex: 1;
+    max-width: 60%;  /* Aumenta a largura das divs que contêm as imagens */
+    display: flex;
+    justify-content: center;  /* Centraliza a imagem dentro da div */
+    align-items: center;      /* Centraliza verticalmente dentro da div */
+    margin-bottom: 10px;      /* Aproxima a imagem do texto */
 }
 
 .home-description, .beneficios-description {
     flex: 1;
-    max-width: 50%; /* Limita a largura a 50% */
-    margin-top: 20px;
-    text-align:center; /* Texto alinhado à esquerda */
-    margin-left: 10%;
-    margin-right: 10%;
+    max-width: 40%;  /* Limita a largura do texto para dar mais espaço à imagem */
+    margin: 0 5%;    /* Centraliza o texto horizontalmente */
+    text-align: left; /* Texto alinhado à esquerda */
 }
 
+/* Estilos para as imagens */
+.home-content img, .beneficios-content img {
+    max-width: 100%; /* A imagem ocupa todo o espaço disponível na div */
+    height: auto;
+}
 /* Ajuste para o conteúdo */
 .home-description h1, .beneficios-description h2 {
     font-size: 3.5rem;
@@ -177,12 +196,21 @@ button a:hover {
 @media (max-width: 768px) {
     .home-conteiner, .beneficios-conteiner {
         flex-direction: column; /* Empilha a imagem e o texto em telas pequenas */
-        padding: 10px; /* Reduz o padding para aproximar mais os elementos */
+        padding: 10px;          /* Reduz o padding para aproximar mais os elementos */
     }
 
     .home-content, .beneficios-content, .home-description, .beneficios-description {
         max-width: 100%; /* Ocupa 100% da largura em telas pequenas */
     }
+   .home-description {
+    position: absolute;
+    padding-top: 70%;
+       }
+    .beneficios-description {
+    position: absolute;
+    padding-top: 135%;
+    }
+
 
     .home-description h1, .beneficios-description h2 {
         font-size: 1.8rem;
@@ -195,8 +223,7 @@ button a:hover {
     }
 
     .home-content img, .beneficios-content img {
-        max-width: 120%; /* Em dispositivos móveis, a imagem volta ao tamanho original */
-        height: auto;
-        margin-bottom: 10px; /* Aproxima a imagem do texto */
+        margin-bottom: 20px; /* Aproxima a imagem do texto */
+        max-width: 150%; /* A imagem ocupa 100% da largura da div em dispositivos móveis */
     }
 }

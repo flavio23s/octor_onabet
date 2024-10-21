@@ -7,7 +7,7 @@ body, html {
     height: 100%;  /* Garante que o body e o html ocupem 100% da altura */
     width: 100%;   /* Garante que o body e o html ocupem 100% da largura */
     overflow-x: hidden; /* Evita a barra de rolagem horizontal */
-    background: url('../img/fundodama.webp') no-repeat center center/cover;
+    background: url('../img/8.webp') no-repeat center center/cover;
 }
 
 /* Ajustando o estilo para as sections */
@@ -73,7 +73,7 @@ section::before {
 }
 
 /* Estilos para as imagens */
-.home-content img, .beneficios-content img {
+.home-content img {
     max-width: 100%;
     height: 100%;
     width: 100%; /* A imagem ocupa todo o espaço disponível na div */
@@ -224,6 +224,7 @@ button a:hover {
     }
 
     .home-content img, .beneficios-content img {
+        display: none;
         margin-bottom: 20px; /* Aproxima a imagem do texto */
         max-width: 100%; /* A imagem ocupa 100% da largura da div em dispositivos móveis */
         margin-top: 0;   /* Remove margens desnecessárias acima da imagem */

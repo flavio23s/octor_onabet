@@ -7,6 +7,7 @@ body, html {
     height: 100%;  /* Garante que o body e o html ocupem 100% da altura */
     width: 100%;   /* Garante que o body e o html ocupem 100% da largura */
     overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+    background: url('../img/fundodama.webp') no-repeat center center/cover;
 }
 
 /* Ajustando o estilo para as sections */
@@ -28,14 +29,7 @@ section {
     background-repeat: no-repeat;
 }
 
-/* Imagem de fundo e escurecimento */
-.home {
-    background: url('../img/4_02.webp') no-repeat center center/cover;
-}
 
-.beneficios {
-    background: url('../img/fundobeneficios.webp') no-repeat center center/cover;
-}
 
 /* Adicionando o efeito de escurecimento */
 section::before {
@@ -80,7 +74,9 @@ section::before {
 
 /* Estilos para as imagens */
 .home-content img, .beneficios-content img {
-    max-width: 100%; /* A imagem ocupa todo o espaço disponível na div */
+    max-width: 100%;
+    height: 100%;
+    width: 100%; /* A imagem ocupa todo o espaço disponível na div */
     height: auto;
 }
 /* Ajuste para o conteúdo */
@@ -237,5 +233,72 @@ button a:hover {
     .home, .beneficios {
         padding-top: 0;   /* Remove padding superior nas seções */
         margin-top: 0;    /* Remove margens superiores */
+    }
+}
+
+/* Seção de provas sociais */
+.provas-sociais {
+    display:inline;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* Estilo do título */
+.carousel-titulo h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Estilos do carrossel */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-item {
+    min-width: 25%; /* 4 imagens visíveis ao mesmo tempo */
+    padding: 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito suave de transição para a rolagem */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100%));
+    }
+}
+
+/* Estilo geral para o carrossel */
+.carousel-track {
+    animation: scroll 15s linear infinite; /* Velocidade ajustável */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 50%; /* 2 imagens visíveis ao mesmo tempo em telas menores */
+    }
+
+    .carousel-titulo h2 {
+        font-size: 1.5rem;
     }
 }

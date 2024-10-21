@@ -1,325 +1,336 @@
 /* Estilos globais */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Bebas Neue', sans-serif;
-    height: 100%;  /* Garante que o body e o html ocupem 100% da altura */
-    width: 100%;   /* Garante que o body e o html ocupem 100% da largura */
-    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
-    background: url('../img/8.webp') no-repeat center center/cover;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  height: 100%; /* Garante que o body e o html ocupem 100% da altura */
+  width: 100%; /* Garante que o body e o html ocupem 100% da largura */
+  overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+  background: url("../img/8.webp") no-repeat center center/cover;
 }
 
 /* Ajustando o estilo para as sections */
 section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    overflow: hidden; /* Garante que nenhum elemento extra cause rolagem */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden; /* Garante que nenhum elemento extra cause rolagem */
 }
 
 /* Ajuste de fundo e escurecimento */
-.home, .beneficios {
-    background-position: center;
-    background-size: cover; /* Garante que o fundo cubra toda a área da seção */
-    background-repeat: no-repeat;
+.home,
+.beneficios {
+  background-position: center;
+  background-size: cover; /* Garante que o fundo cubra toda a área da seção */
+  background-repeat: no-repeat;
 }
-
-
 
 /* Adicionando o efeito de escurecimento */
 section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Ajuste a opacidade conforme necessário */
-    z-index: 1;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Ajuste a opacidade conforme necessário */
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Estilos para centralizar as imagens e aproximar do texto */
-.home-conteiner, .beneficios-conteiner {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;      /* Centraliza verticalmente */
-    flex-wrap: wrap;          /* Permite empilhamento em dispositivos menores */
-    padding: 20px;
-    text-align: center;       /* Centraliza o texto */
+.home-conteiner,
+.beneficios-conteiner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-wrap: wrap; /* Permite empilhamento em dispositivos menores */
+  padding: 20px;
+  text-align: center; /* Centraliza o texto */
 }
 
-.home-content, .beneficios-content {
-    flex: 1;
-    max-width: 60%;  /* Aumenta a largura das divs que contêm as imagens */
-    display: flex;
-    justify-content: center;  /* Centraliza a imagem dentro da div */
-    align-items: center;      /* Centraliza verticalmente dentro da div */
-    margin-bottom: 10px;      /* Aproxima a imagem do texto */
+.home-content,
+.beneficios-content {
+  flex: 1;
+  max-width: 60%; /* Aumenta a largura das divs que contêm as imagens */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem dentro da div */
+  align-items: center; /* Centraliza verticalmente dentro da div */
+  margin-bottom: 10px; /* Aproxima a imagem do texto */
 }
 
-.home-description, .beneficios-description {
-    flex: 1;
-    max-width: 40%;  /* Limita a largura do texto para dar mais espaço à imagem */
-    margin: 0 5%;    /* Centraliza o texto horizontalmente */
-    text-align: center; /* Texto alinhado à esquerda */
+.home-description,
+.beneficios-description {
+  flex: 1;
+  max-width: 40%; /* Limita a largura do texto para dar mais espaço à imagem */
+  margin: 0 5%; /* Centraliza o texto horizontalmente */
+  text-align: center; /* Texto alinhado à esquerda */
 }
 
 /* Estilos para as imagens */
 .home-content img {
-    max-width: 100%;
-    height: 100%;
-    width: 100%; /* A imagem ocupa todo o espaço disponível na div */
-    height: auto;
+  max-width: 100%;
+  height: 100%;
+  width: 100%; /* A imagem ocupa todo o espaço disponível na div */
+  height: auto;
 }
 /* Ajuste para o conteúdo */
-.home-description h1, .beneficios-description h2 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
+.home-description h1,
+.beneficios-description h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.home-description p, .beneficios-description ul {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
+.home-description p,
+.beneficios-description ul {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
 }
 
 .beneficios-description ul {
-    list-style: none; /* Remove as bolinhas padrão */
-    padding: 0;
+  list-style: none; /* Remove as bolinhas padrão */
+  padding: 0;
 }
 
 .beneficios-description ul li {
-    margin-bottom: 10px;
-    position: relative;
-    text-align: left;
-    padding-left: 25px; /* Espaço para o ícone da seta */
+  margin-bottom: 10px;
+  position: relative;
+  text-align: left;
+  padding-left: 25px; /* Espaço para o ícone da seta */
 }
 
 .beneficios-description ul li::before {
-    content: '\2714'; /* Código Unicode para a marca de verificação (✔) */
-    color: #25E046; /* Cor verde para o ícone */
-    font-size: 1.2rem; /* Tamanho do ícone */
-    position: absolute;
-    left: 0; /* Posiciona o ícone à esquerda do item */
-    top: 0;
+  content: "\2714"; /* Código Unicode para a marca de verificação (✔) */
+  color: #25e046; /* Cor verde para o ícone */
+  font-size: 1.2rem; /* Tamanho do ícone */
+  position: absolute;
+  left: 0; /* Posiciona o ícone à esquerda do item */
+  top: 0;
 }
-
 
 /* Estilos para os botões */
 /* Estilos para os botões */
 button {
-    background-color: #25E046;
-    border: 2px solid transparent; /* Borda inicial invisível */
-    padding: 1rem 2rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: white;
-    border-radius: 10px;
-    position: relative;
-    align-items: center;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    text-transform: uppercase;
-    font-weight: bold;
-    z-index: 1;
+  background-color: #25e046;
+  border: 2px solid transparent; /* Borda inicial invisível */
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 1;
 }
 
 button a {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    z-index: 2; /* Para que o texto fique acima do efeito de brilho */
+  color: white;
+  text-decoration: none;
+  position: relative;
+  z-index: 2; /* Para que o texto fique acima do efeito de brilho */
 }
 
 /* Efeito de brilho nas bordas */
 button::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #25E046, #ffffff, #25E046, #ffffff);
-    background-size: 400%;
-    z-index: 0;
-    border-radius: 7px; /* Levemente maior que o botão para efeito de borda */
-    animation: border-glow 2s linear infinite;
-    opacity: 0.6;
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #25e046, #ffffff, #25e046, #ffffff);
+  background-size: 400%;
+  z-index: 0;
+  border-radius: 7px; /* Levemente maior que o botão para efeito de borda */
+  animation: border-glow 2s linear infinite;
+  opacity: 0.6;
 }
 
 /* Efeito de brilho no texto */
 button:hover a {
-    text-shadow: 0 0 8px rgba(37, 224, 70, 0.8), 0 0 12px rgba(37, 224, 70, 0.6);
+  text-shadow: 0 0 8px rgba(37, 224, 70, 0.8), 0 0 12px rgba(37, 224, 70, 0.6);
 }
 
 /* Animação de brilho nas bordas */
 @keyframes border-glow {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Efeito de brilho no fundo ao passar o mouse */
 button:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 
-                inset 0 0 10px rgba(255, 255, 255, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.8),
+    inset 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 /* Para garantir o contraste com o efeito de brilho */
 button a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-
 /* Estilos para as imagens */
-.home-content img, .beneficios-content img {
-    max-width: 190%; /* Aumenta o tamanho da imagem para 150% do seu tamanho padrão */
-    height: auto; /* Mantém a proporção original da imagem */
-    object-fit: cover; /* Assegura que a imagem cubra o espaço sem distorcer */
+.home-content img,
+.beneficios-content img {
+  max-width: 190%; /* Aumenta o tamanho da imagem para 150% do seu tamanho padrão */
+  height: auto; /* Mantém a proporção original da imagem */
+  object-fit: cover; /* Assegura que a imagem cubra o espaço sem distorcer */
 }
 
 /* Responsividade para dispositivos menores */
 @media (max-width: 768px) {
-    .home {
-        align-items: end;
-        padding: 20px 10px; /* Ajusta o padding para reduzir espaço */
-        min-height: 80vh;   /* Reduz a altura mínima da seção em dispositivos móveis */     
-    }
+  .home {
+    align-items: end;
+    padding: 20px 10px; /* Ajusta o padding para reduzir espaço */
+    min-height: 80vh; /* Reduz a altura mínima da seção em dispositivos móveis */
+  }
 
-    .home-conteiner, .beneficios-conteiner {
-        flex-direction: column; /* Empilha a imagem e o texto em telas pequenas */
-        padding: 10px;          /* Reduz o padding para aproximar mais os elementos */
-        align-items: center;    /* Centraliza horizontalmente os elementos */
-        justify-content: center; /* Centraliza verticalmente os elementos */
-        text-align: center;
-    }
+  .home-conteiner,
+  .beneficios-conteiner {
+    flex-direction: column; /* Empilha a imagem e o texto em telas pequenas */
+    padding: 10px; /* Reduz o padding para aproximar mais os elementos */
+    align-items: center; /* Centraliza horizontalmente os elementos */
+    justify-content: center; /* Centraliza verticalmente os elementos */
+    text-align: center;
+  }
 
-    .home-content, .beneficios-content, .home-description, .beneficios-description {
-        max-width: 100%; /* Ocupa 100% da largura em telas pequenas */
-    }
+  .home-content,
+  .beneficios-content,
+  .home-description,
+  .beneficios-description {
+    max-width: 100%; /* Ocupa 100% da largura em telas pequenas */
+  }
 
-    .home-description {
-        position: relative; /* Altera para relative para evitar sobreposições */
-        padding-top: 0;     /* Remove o padding superior para alinhar melhor o texto */
-        align-items: center;
-        text-align: center;
-        margin-top: -20px;  /* Ajusta o espaçamento acima para aproximar do conteúdo */
-    }
+  .home-description {
+    position: relative; /* Altera para relative para evitar sobreposições */
+    padding-top: 0; /* Remove o padding superior para alinhar melhor o texto */
+    align-items: center;
+    text-align: center;
+    margin-top: -20px; /* Ajusta o espaçamento acima para aproximar do conteúdo */
+  }
 
-    .beneficios-description {
-        position: relative; /* Altera para relative para evitar sobreposições */
-        padding-top: 0;     /* Remove o padding superior para alinhar melhor o texto */
-        margin-top: -20px;  /* Ajusta o espaçamento acima para aproximar do conteúdo */
-        margin-left: 10%;
-        margin-right: 10%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;  /* Centraliza os itens horizontalmente */
-        justify-content: center; /* Centraliza verticalmente */
-        text-align: center;
-    }
+  .beneficios-description {
+    position: relative; /* Altera para relative para evitar sobreposições */
+    padding-top: 0; /* Remove o padding superior para alinhar melhor o texto */
+    margin-top: -20px; /* Ajusta o espaçamento acima para aproximar do conteúdo */
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+  }
 
-    .home-description h1, .beneficios-description h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem; /* Diminui o espaçamento inferior */
-    }
+  .home-description h1,
+  .beneficios-description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem; /* Diminui o espaçamento inferior */
+  }
 
-    .home-description p, .beneficios-description ul {
-        font-size: 1.5rem;
-        margin-bottom: 1rem; /* Diminui o espaçamento inferior */
-    }
+  .home-description p,
+  .beneficios-description ul {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Diminui o espaçamento inferior */
+  }
 
-    .home-content img {
-        display: none;
-        margin-bottom: 20px; /* Aproxima a imagem do texto */
-        max-width: 100%; /* A imagem ocupa 100% da largura da div em dispositivos móveis */
-        margin-top: 0;   /* Remove margens desnecessárias acima da imagem */
-        padding: 0;      /* Remove padding da imagem */
-    }
+  .home-content img {
+    display: none;
+    margin-bottom: 20px; /* Aproxima a imagem do texto */
+    max-width: 100%; /* A imagem ocupa 100% da largura da div em dispositivos móveis */
+    margin-top: 0; /* Remove margens desnecessárias acima da imagem */
+    padding: 0; /* Remove padding da imagem */
+  }
 
-    .home, .beneficios {
-        padding-top: 0;   /* Remove padding superior nas seções */
-        margin-top: 0;    /* Remove margens superiores */
-    }
+  .home,
+  .beneficios {
+    padding-top: 0; /* Remove padding superior nas seções */
+    margin-top: 0; /* Remove margens superiores */
+  }
 }
 
 /* Seção de provas sociais */
 .provas-sociais {
-    display:inline;
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fff;
-    width: 100%;
+  display: inline;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
 }
 
 /* Estilo do título */
 .carousel-titulo h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 /* Estilos do carrossel */
 .carousel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-    gap: 20%;
-    margin-bottom: 20%;
-
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  gap: 20%;
+  margin-bottom: 20%;
 }
 
 .carousel-item {
-    min-width: 35%; /* 4 imagens visíveis ao mesmo tempo */
-    padding: 10px;
+  min-width: 35%; /* 4 imagens visíveis ao mesmo tempo */
+  padding: 10px;
 }
 
 .carousel-item img {
-    width: 150%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Efeito suave de transição para a rolagem */
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-100%));
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
 }
 
 /* Estilo geral para o carrossel */
 .carousel-track {
-    animation: scroll 15s linear infinite; /* Velocidade ajustável */
+  animation: scroll 15s linear infinite; /* Velocidade ajustável */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .carousel-item {
-        min-width: 80%; /* 2 imagens visíveis ao mesmo tempo em telas menores */
-    }
+  .carousel-item {
+    min-width: 80%; /* 2 imagens visíveis ao mesmo tempo em telas menores */
+  }
 
-    .carousel-titulo h2 {
-        font-size: 1.5rem;
-    }
+  .carousel-titulo h2 {
+    font-size: 1.5rem;
+  }
 }

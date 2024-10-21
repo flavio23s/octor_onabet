@@ -69,7 +69,7 @@ section::before {
     flex: 1;
     max-width: 40%;  /* Limita a largura do texto para dar mais espaço à imagem */
     margin: 0 5%;    /* Centraliza o texto horizontalmente */
-    text-align: left; /* Texto alinhado à esquerda */
+    text-align: center; /* Texto alinhado à esquerda */
 }
 
 /* Estilos para as imagens */
@@ -83,6 +83,7 @@ section::before {
 .home-description h1, .beneficios-description h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .home-description p, .beneficios-description ul {
@@ -281,15 +282,18 @@ button a:hover {
     display: flex;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
+    gap: 20%;
+    margin-bottom: 20%;
+
 }
 
 .carousel-item {
-    min-width: 25%; /* 4 imagens visíveis ao mesmo tempo */
+    min-width: 35%; /* 4 imagens visíveis ao mesmo tempo */
     padding: 10px;
 }
 
 .carousel-item img {
-    width: 100%;
+    width: 150%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -312,7 +316,7 @@ button a:hover {
 /* Responsividade */
 @media (max-width: 768px) {
     .carousel-item {
-        min-width: 50%; /* 2 imagens visíveis ao mesmo tempo em telas menores */
+        min-width: 80%; /* 2 imagens visíveis ao mesmo tempo em telas menores */
     }
 
     .carousel-titulo h2 {

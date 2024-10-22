@@ -73,6 +73,7 @@ section::before {
   max-width: 40%; /* Limita a largura do texto para dar mais espaço à imagem */
   margin: 0 5%; /* Centraliza o texto horizontalmente */
   text-align: center; /* Texto alinhado à esquerda */
+  align-itens: center;
 }
 
 /* Estilos para as imagens */
@@ -88,33 +89,6 @@ section::before {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   text-align: center;
-}
-
-.home-description p,
-.beneficios-description ul {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-}
-
-.beneficios-description ul {
-  list-style: none; /* Remove as bolinhas padrão */
-  padding: 0;
-}
-
-.beneficios-description ul li {
-  margin-bottom: 10px;
-  position: relative;
-  text-align: left;
-  padding-left: 25px; /* Espaço para o ícone da seta */
-}
-
-.beneficios-description ul li::before {
-  content: "\2714"; /* Código Unicode para a marca de verificação (✔) */
-  color: #25e046; /* Cor verde para o ícone */
-  font-size: 1.2rem; /* Tamanho do ícone */
-  position: absolute;
-  left: 0; /* Posiciona o ícone à esquerda do item */
-  top: 0;
 }
 
 /* Estilos para os botões */
@@ -202,12 +176,18 @@ button a:hover {
     min-height: 80vh; /* Reduz a altura mínima da seção em dispositivos móveis */
   }
 
-  .home-conteiner,
-  .beneficios-conteiner {
+  .home-conteiner {
     flex-direction: column; /* Empilha a imagem e o texto em telas pequenas */
     padding: 10px; /* Reduz o padding para aproximar mais os elementos */
     align-items: center; /* Centraliza horizontalmente os elementos */
     justify-content: center; /* Centraliza verticalmente os elementos */
+    text-align: center;
+  }
+  
+  .beneficios-conteiner {
+    flex-direction: column; /* Empilha a imagem e o texto em telas pequenas */
+    padding: 10px; /* Reduz o padding para aproximar mais os elementos */
+    align-items: center; /* Centraliza horizontalmente os elementos */
     text-align: center;
   }
 
@@ -226,23 +206,19 @@ button a:hover {
     margin-top: -20px; /* Ajusta o espaçamento acima para aproximar do conteúdo */
   }
 
-  .beneficios-description {
-    position: relative; /* Altera para relative para evitar sobreposições */
-    padding-top: 0; /* Remove o padding superior para alinhar melhor o texto */
-    margin-top: -20px; /* Ajusta o espaçamento acima para aproximar do conteúdo */
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    text-align: center;
-  }
+.beneficios-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  text-align: center; /* Garante que o texto do h2 fique centralizado */
+}
 
   .home-description h1,
   .beneficios-description h2 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem; /* Diminui o espaçamento inferior */
+    align-itens: center;
   }
 
   .home-description p,
@@ -327,8 +303,16 @@ button a:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   .carousel-item {
-    min-width: 80%; /* 2 imagens visíveis ao mesmo tempo em telas menores */
+    min-width: 30%; /* 2 imagens visíveis ao mesmo tempo em telas menores */
   }
+  
+  .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  gap: 10%;
+  margin-bottom: 20%;
+}
 
   .carousel-titulo h2 {
     font-size: 1.5rem;

@@ -189,6 +189,7 @@ button a:hover {
     padding: 10px; /* Reduz o padding para aproximar mais os elementos */
     align-items: center; /* Centraliza horizontalmente os elementos */
     text-align: center;
+    justify-content: center;
   }
 
   .home-content,
